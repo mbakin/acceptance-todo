@@ -74,9 +74,9 @@ After(async function(scenario){
   // Take a screenshot if a scenario fails
   if(scenario.result.status === Status.FAILED) {
     const screenShotName = scenario.pickle.name.replace(/[\W_]+/g, '-');
-    await this.page.screenshot({
-      path: `${config.screenshotPath}/error/${screenShotName}.png`
-    });
+    // await this.page.screenshot({
+    //   path: `${config.screenshotPath}/error/${screenShotName}.png`
+    // });
   }
 });
 
