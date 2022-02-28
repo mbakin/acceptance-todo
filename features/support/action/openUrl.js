@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
  * @param {String} device The device to emulate.  Valid device names can be found in https://github.com/GoogleChrome/puppeteer/blob/master/lib/DeviceDescriptors.js
  */
 module.exports = async function(url, userAgent, device) {
-    const fullUrl = url.match(/^http.*$/i) ? url : this.config.rootUrl + url;
+    const fullUrl = url.match(/^https.*$/i) ? url : this.config.rootUrl + url;
 
     // Set the user agent if it exists
     if(userAgent){
