@@ -7,7 +7,7 @@ const clickElement = require("../support/action/clickElement");
 const assert = require("assert")
 
 Given(/^Empty ToDo list$/,async function () {
-  await openUrl.call(this, "/");
+  await openUrl.call(this, "");
   await waitForSelector.call(this, ".layout")
   await waitForSelector.call(this, "h2")
   await checkElementExists.call(this, ".todos", false)
@@ -34,4 +34,6 @@ Then(/^I should see "([^"]*)" item in ToDo list$/, async function (dummy) {
     dummy
   )
   assert.strictEqual(todo,true)
+  
+  await this.page.waitForTimeout(4000)
 });
