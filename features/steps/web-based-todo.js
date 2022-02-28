@@ -16,8 +16,8 @@ Given(/^Empty ToDo list$/,async function () {
 
 
 When(/^I write "([^"]*)" to text box and click to add button$/, async function (dummyTodo) {
-    await sendKeys.call(this, "#add-todo-input", dummyTodo)
-    await clickElement.call(this, "#add-todo-button")
+  await sendKeys.call(this, "#add-todo-input", dummyTodo)
+  await clickElement.call(this, "#add-todo-button")
 });
 
 Then(/^I should see "([^"]*)" item in ToDo list$/, async function (dummy) {
@@ -27,7 +27,7 @@ Then(/^I should see "([^"]*)" item in ToDo list$/, async function (dummy) {
     async (todoItems, dummy) => {
       let todoItemExist = todoItems.
       find(item => item.querySelector(".todos"))
-      const text = todoItemExist.querySelector("li").textContent.includes(dummy)
+      const text = todoItemExist.querySelector("div").textContent.includes(dummy)
       console.log(text)
       return !!todoItemExist
     },
@@ -37,3 +37,4 @@ Then(/^I should see "([^"]*)" item in ToDo list$/, async function (dummy) {
   
   await this.page.waitForTimeout(4000)
 });
+
