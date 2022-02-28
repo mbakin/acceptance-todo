@@ -14,7 +14,6 @@ Given(/^Empty ToDo list$/,async function () {
   
 });
 
-
 When(/^I write "([^"]*)" to text box and click to add button$/, async function (dummyTodo) {
   await sendKeys.call(this, "#add-todo-input", dummyTodo)
   await clickElement.call(this, "#add-todo-button")
