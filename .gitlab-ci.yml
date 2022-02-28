@@ -1,0 +1,9 @@
+stages:
+  - test
+
+test:
+  image: satantime/puppeteer-node
+  stage: test
+  script:
+    - yarn install
+    - yarn start
