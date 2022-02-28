@@ -7,5 +7,3 @@ test:
   script:
     - yarn install
     - yarn start
-  endpoints:
-    - https://fe-todo-assignment-mbakin.herokuapp.com/
