@@ -19,7 +19,7 @@
   "puppeteerOptions": {
     "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD": "true",
     "PUPPETEER_EXECUTABLE_PATH": "which chromium",
-    "headless": false,
+    "headless": true,
     "ignoreHTTPSErrors" : true,
     "sloMo": 250,
     "defaultViewport": {
