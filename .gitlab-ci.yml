@@ -2,7 +2,7 @@ stages:
   - test
 
 test:
-  image: satantime/puppeteer-node
+  image: zenato/puppeteer-renderer
   stage: test
   script:
     - yarn install
